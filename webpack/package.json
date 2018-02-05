@@ -1,0 +1,28 @@
+{
+  "name": "webpack_simple_project",
+  "version": "0.0.1",
+  "description": "webpack simple project",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "set NODE_ENV=release webpack -p",
+    "build-win": "set NODE_ENV=release&& webpack -p",
+    "build-mac": "set NODE_ENV=release webpack -p",
+    "debug": "webpack --debug -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doxas/es2015_tips.git"
+  },
+  "author": "doxas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doxas/es2015_tips/issues"
+  },
+  "homepage": "https://github.com/doxas/es2015_tips#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0"
+  }
+}
