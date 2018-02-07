@@ -1,5 +1,6 @@
 
 export default class Utilities {
+	static get VERSION(){return '0.0.1';}
 	/**
 	 * format of number
 	 * @param {number} number - integer
