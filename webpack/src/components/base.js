@@ -4,15 +4,12 @@ export default class ComponentBase {
 		this.listeners = {};
 		this.wrap = document.createElement('div');
 	}
-	discard(){
+	discardListeners(){
 		let key = Object.keys(this.listeners);
 		key.map((v) => {
 			this.listeners[v] = null;
 		});
 		this.listeners = null;
-	}
-	getElement(){
-		return this.wrap;
 	}
 	on(eventName, listener){
 		this.listeners[eventName] = listener;
@@ -21,6 +18,9 @@ export default class ComponentBase {
 		if(this.listeners.hasOwnProperty(eventName) === true){
 			this.listeners[eventName](args);
 		}
+	}
+	getElement(){
+		return this.wrap;
 	}
 }
 

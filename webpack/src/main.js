@@ -13,5 +13,15 @@ window.addEventListener('load', () => {
 	let Manager = new ComponentManager();
 	let checkbox = new Manager.CheckBox();
 	document.body.appendChild(checkbox.getElement());
+
+	checkbox.on('change', (eve) => {
+		console.log('%c♥', 'color: deeppink', checkbox.getValue(), eve);
+	});
+
+	setTimeout(() => {
+		console.log('goodbye checkbox');
+		checkbox.discard();
+		checkbox = null;
+	}, 5000);
 }, false);
 
